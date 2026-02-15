@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NÉBULA STUDIO | Unlock Your Digital Cosmos</title>
+    <meta name="description"
+        content="Transformamos pequenos negócios em marcas que parecem gigantes. Branding, IA, design premium e estratégia digital.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Barra de Progresso -->
+    <div id="scroll-progress" class="scroll-progress" style="width:0%"></div>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow" class="cursor-glow"></div>
+    <!-- Background Cósmico -->
+    <div class="cosmic-bg"></div>
+    <div class="stars"></div>
+    <div class="bg-noise"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;">
+        <div class="morph-blob blob-1"></div>
+        <div class="morph-blob blob-2"></div>
+        <div class="morph-blob blob-3"></div>
+    </div>
+
+    <!-- NAV -->
+    <header
+        style="position:fixed;top:0;left:0;right:0;z-index:9990;padding:1rem 1.5rem;background:rgba(5,5,16,0.8);backdrop-filter:blur(16px);border-bottom:1px solid rgba(168,85,247,0.05);transition:all 0.3s;">
+        <div style="max-width:80rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+            <a href="#" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;">
+                <img src="logo.png" alt="Nébula Studio"
+                    style="height:40px;width:40px;object-fit:contain;border-radius:8px;">
+                <span
+                    style="color:white;font-family:var(--font-display);font-weight:700;font-size:1.1rem;letter-spacing:0.05em;">NÉBULA
+                    STUDIO</span>
+            </a>
+            <nav style="display:flex;gap:2rem;" class="desktop-nav">
+                <a href="#manifesto"
+                    style="color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;transition:color 0.3s;"
+                    onmouseover="this.style.color='var(--nebula-cyan)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Manifesto</a>
+                <a href="#servicos"
+                    style="color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;transition:color 0.3s;"
+                    onmouseover="this.style.color='var(--nebula-cyan)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Serviços</a>
+                <a href="#pacotes"
+                    style="color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;transition:color 0.3s;"
+                    onmouseover="this.style.color='var(--nebula-cyan)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Pacotes</a>
+                <a href="#processo"
+                    style="color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.05em;transition:color 0.3s;"
+                    onmouseover="this.style.color='var(--nebula-cyan)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Processo</a>
+                <a href="#contato"
+                    style="color:var(--nebula-cyan);text-decoration:none;font-size:0.85rem;font-weight:700;letter-spacing:0.05em;border:1px solid rgba(34,211,238,0.3);padding:0.5rem 1.2rem;border-radius:9999px;transition:all 0.3s;"
+                    onmouseover="this.style.background='var(--nebula-cyan)';this.style.color='black'"
+                    onmouseout="this.style.background='transparent';this.style.color='var(--nebula-cyan)'">Contato</a>
+            </nav>
+            <button id="menu-open"
+                style="display:none;background:none;border:none;color:white;cursor:pointer;z-index:9999;"
+                aria-label="Abrir menu">
+                <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <button id="menu-close"
+            style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:white;cursor:pointer;"
+            aria-label="Fechar menu">
+            <span class="material-symbols-outlined" style="font-size:32px;">close</span>
+        </button>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section
+            style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 1.5rem 4rem;position:relative;z-index:10;">
+            <div
+                style="max-width:80rem;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2.5rem;">
+                <img src="logo.png" alt="Nébula Studio"
+                    style="width:180px;height:180px;object-fit:contain;filter:drop-shadow(0 0 40px rgba(168,85,247,0.4));animation:float 6s ease-in-out infinite;">
+                <div
+                    style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.4rem 1rem;border-radius:9999px;background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.15);">
+                    <span
+                        style="width:6px;height:6px;border-radius:50%;background:var(--nebula-cyan);animation:pulse 2s infinite;"></span>
+                    <span
+                        style="font-size:0.65rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-cyan);">Apresentação
+                        2025</span>
+                </div>
+                <h1
+                    style="font-size:clamp(3rem,8vw,6rem);line-height:1;margin-bottom:1.5rem;font-family:var(--font-display);color:white;">
+                    Unlock your <br>
+                    <span class="text-gradient glitch" data-text="digital marca"
+                        style="font-weight:800;letter-spacing:-0.02em;">digital marca</span>
+                    <span
+                        style="display:inline-block;width:4px;height:1em;background:var(--nebula-cyan);animation:blink 1s infinite;vertical-align:middle;margin-left:5px;"></span>
+                </h1>
+                <p style="color:var(--text-muted);font-size:1.15rem;max-width:38rem;font-weight:300;line-height:1.8;">
+                    Transformamos pequenos negócios em marcas que parecem gigantes usando design, estratégia, narrativa
+                    e IA.
+                </p>
+                <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;">
+                    <a href="#contato" class="neon-btn">
+                        Explore Our Universe <span class="material-symbols-outlined"
+                            style="font-size:20px;">rocket_launch</span>
+                    </a>
+                    <a href="#servicos" class="secondary-btn">
+                        VER SERVIÇOS <span class="material-symbols-outlined" style="font-size:18px;">explore</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee-strip">
+            <div class="marquee-content">
+                <span>BRANDING</span><span class="highlight">✦</span>
+                <span>AVATARES IA</span><span class="highlight">✦</span>
+                <span>REBRANDING 48H</span><span class="highlight">✦</span>
+                <span>CONTEÚDO VISUAL</span><span class="highlight">✦</span>
+                <span>ESTRATÉGIA DIGITAL</span><span class="highlight">✦</span>
+                <span>IDENTIDADE VISUAL</span><span class="highlight">✦</span>
+                <span>NARRATIVA</span><span class="highlight">✦</span>
+                <span>DESIGN PREMIUM</span><span class="highlight">✦</span>
+                <span>BRANDING</span><span class="highlight">✦</span>
+                <span>AVATARES IA</span><span class="highlight">✦</span>
+                <span>REBRANDING 48H</span><span class="highlight">✦</span>
+                <span>CONTEÚDO VISUAL</span><span class="highlight">✦</span>
+                <span>ESTRATÉGIA DIGITAL</span><span class="highlight">✦</span>
+                <span>IDENTIDADE VISUAL</span><span class="highlight">✦</span>
+                <span>NARRATIVA</span><span class="highlight">✦</span>
+                <span>DESIGN PREMIUM</span><span class="highlight">✦</span>
+            </div>
+        </div>
+
+        <!-- MANIFESTO -->
+        <section id="manifesto" style="padding:6rem 1.5rem;position:relative;z-index:10;">
+            <div style="max-width:50rem;margin:0 auto;text-align:center;">
+                <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+                    <span
+                        style="display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.15);font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-purple);margin-bottom:1rem;">01
+                        — Manifesto</span>
+                    <h2 class="glitch-hover"
+                        style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);color:white;margin-bottom:1.5rem;">
+                        Seu produto é bom.<br>Sua <span class="text-gradient">imagem</span> acompanha?
+                    </h2>
+                    <p
+                        style="color:var(--text-muted);font-size:1.1rem;font-weight:300;line-height:1.9;max-width:40rem;margin:0 auto;">
+                        Você sabe o que faz. Seu produto é bom. Mas sua imagem não acompanha seu potencial.<br><br>
+                        A <strong style="color:var(--nebula-cyan);">Nébula Studio</strong> transforma pequenos negócios
+                        em marcas que parecem gigantes usando design, estratégia, narrativa e IA.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" style="padding:6rem 1.5rem;position:relative;z-index:10;">
+        <div style="max-width:72rem;margin:0 auto;">
+            <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+                <span
+                    style="display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(34,211,238,0.08);border:1px solid rgba(34,211,238,0.15);font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-cyan);margin-bottom:1rem;">02
+                    — Serviços</span>
+                <h2
+                    style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);color:white;">
+                    O que <span class="text-gradient">entregamos</span></h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+                <div class="glass-card neon-border reveal delay-1"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;min-height:280px;">
+                    <div class="premium-icon-wrapper">
+                        <span class="material-symbols-outlined">palette</span>
+                    </div>
+                    <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:white;">Branding
+                        & Posicionamento</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;line-height:1.7;">Identidade
+                        visual completa que traduz a essência do seu negócio em uma marca memorável.</p>
+                </div>
+                <div class="glass-card reveal delay-2"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;min-height:280px;">
+                    <div class="premium-icon-wrapper">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+                    <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:white;">Avatares
+                        IA Exclusivos</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;line-height:1.7;">Representações
+                        visuais únicas geradas por IA avançada para sua marca digital.</p>
+                </div>
+                <div class="glass-card reveal delay-3"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;min-height:280px;">
+                    <div class="premium-icon-wrapper">
+                        <span class="material-symbols-outlined">bolt</span>
+                    </div>
+                    <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:white;">
+                        Rebranding em 48h</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;line-height:1.7;">Transformação
+                        completa da sua identidade visual com agilidade absurda.</p>
+                </div>
+                <div class="glass-card reveal delay-4"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;min-height:280px;">
+                    <div class="premium-icon-wrapper">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </div>
+                    <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:white;">Conteúdo
+                        Visual Premium</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;line-height:1.7;">Posts, vídeos e
+                        mockups profissionais que elevam seu feed a outro nível.</p>
+                </div>
+                <div class="glass-card reveal delay-5"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;min-height:280px;">
+                    <div class="premium-icon-wrapper">
+                        <span class="material-symbols-outlined">trending_up</span>
+                    </div>
+                    <h3 style="font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:white;">
+                        Estratégia que Converte</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;line-height:1.7;">Narrativa +
+                        estética + conteúdo que vende. Estratégia digital completa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <!-- STATS (NEON RADIAL) -->
+    <!-- STATS (REALISTIC STARTER) -->
+    <section style="padding:4rem 1.5rem;position:relative;z-index:10;">
+        <div style="max-width:60rem;margin:0 auto;">
+            <div class="reveal"
+                style="text-align:center;margin-bottom:3rem;font-family:var(--font-display);font-size:1.2rem;letter-spacing:0.2em;color:var(--nebula-pink);text-transform:uppercase;">
+                Nosso Começo</div>
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:3rem;justify-content:center;">
+                <!-- Stat 1 -->
+                <div class="reveal delay-1" style="text-align:center;">
+                    <div class="radial-stat-wrapper" style="--color:var(--nebula-magenta)">
+                        <div class="radial-progress" style="--progress:0%" data-value="100">
+                            <span>0%</span>
+                        </div>
+                    </div>
+                    <h3 style="color:white;font-weight:700;font-size:1.2rem;margin-bottom:0.2rem;">100%</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;">
+                        Dedicação</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="reveal delay-2" style="text-align:center;">
+                    <div class="radial-stat-wrapper" style="--color:var(--nebula-cyan)">
+                        <div class="radial-progress" style="--progress:0%" data-value="10" data-suffix="+">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <h3 style="color:white;font-weight:700;font-size:1.2rem;margin-bottom:0.2rem;">10+</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;">
+                        Nichos Estudados</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="reveal delay-3" style="text-align:center;">
+                    <div class="radial-stat-wrapper" style="--color:var(--nebula-purple)">
+                        <div class="radial-progress" style="--progress:0%" data-value="24" data-suffix="/7">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <h3 style="color:white;font-weight:700;font-size:1.2rem;margin-bottom:0.2rem;">24/7</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;">
+                        Suporte</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="reveal delay-4" style="text-align:center;">
+                    <div class="radial-stat-wrapper" style="--color:var(--nebula-pink)">
+                        <div class="radial-progress" style="--progress:0%" data-value="100" data-suffix="%">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <h3 style="color:white;font-weight:700;font-size:1.2rem;margin-bottom:0.2rem;">100%</h3>
+                    <p style="color:var(--text-muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;">
+                        Foco em Você</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACOTES -->
+    <section id="pacotes" style="padding:6rem 1.5rem;position:relative;z-index:10;">
+        <div style="max-width:72rem;margin:0 auto;">
+            <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+                <span
+                    style="display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(244,114,182,0.08);border:1px solid rgba(244,114,182,0.15);font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-pink);margin-bottom:1rem;">04
+                    — Pacotes</span>
+                <h2
+                    style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);color:white;">
+                    Escolha sua <span class="text-gradient-pink">órbita</span></h2>
+            </div>
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;align-items:stretch;">
+                <!-- Pacote 1 -->
+                <div class="glass-card reveal delay-1"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;">
+                    <span
+                        style="font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-purple);">Identidade
+                        Visual Express</span>
+                    <div><span
+                            style="font-family:var(--font-display);font-weight:700;font-size:2.5rem;color:white;">R$350</span><span
+                            style="color:var(--text-muted);font-size:0.9rem;"> — R$700</span></div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-purple);font-size:16px;">check_circle</span>Logo em todas as
+                            versões
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-purple);font-size:16px;">check_circle</span>Paleta e
+                            tipografia
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-purple);font-size:16px;">check_circle</span>Manual rápido da
+                            marca
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-purple);font-size:16px;">check_circle</span>Mockups
+                            profissionais
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        style="display:block;text-align:center;padding:1rem;border-radius:12px;border:1px solid rgba(168,85,247,0.3);color:var(--nebula-purple);font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.3s;">Começar</a>
+                </div>
+                <!-- Pacote 2 - Destaque -->
+                <div class="glass-card package-featured reveal delay-2"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;position:relative;">
+                    <div
+                        style="position:absolute;top:1.5rem;right:1.5rem;padding:0.25rem 0.75rem;border-radius:9999px;background:linear-gradient(135deg,var(--nebula-purple),var(--nebula-cyan));font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;">
+                        POPULAR</div>
+                    <span
+                        style="font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-cyan);">Presença
+                        Digital IA</span>
+                    <div><span
+                            style="font-family:var(--font-display);font-weight:700;font-size:2.5rem;color:white;">R$450</span><span
+                            style="color:var(--text-muted);font-size:0.9rem;"> — R$900/mês</span></div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-cyan);font-size:16px;">check_circle</span>Tudo do Express
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-cyan);font-size:16px;">check_circle</span>Avatar IA exclusivo
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-cyan);font-size:16px;">check_circle</span>Posts e vídeos
+                            mensais
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-cyan);font-size:16px;">check_circle</span>Estratégia de
+                            conteúdo
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        style="display:block;text-align:center;padding:1rem;border-radius:12px;background:linear-gradient(135deg,var(--nebula-purple),var(--nebula-violet));color:white;font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.3s;box-shadow:0 0 20px rgba(168,85,247,0.2);">Escolher
+                        plano</a>
+                </div>
+                <!-- Pacote 3 -->
+                <div class="glass-card reveal delay-3"
+                    style="border-radius:24px;padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;">
+                    <span
+                        style="font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-pink);">Escala
+                        Cósmica</span>
+                    <div><span
+                            style="font-family:var(--font-display);font-weight:700;font-size:2.5rem;color:white;">R$900</span><span
+                            style="color:var(--text-muted);font-size:0.9rem;"> — R$2000/mês</span></div>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;flex:1;">
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-pink);font-size:16px;">check_circle</span>Tudo do Presença
+                            Digital
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-pink);font-size:16px;">check_circle</span>Rebranding completo
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-pink);font-size:16px;">check_circle</span>Acompanhamento
+                            mensal
+                        </li>
+                        <li
+                            style="display:flex;align-items:center;gap:0.75rem;color:var(--text-muted);font-size:0.85rem;font-weight:300;">
+                            <span class="material-symbols-outlined"
+                                style="color:var(--nebula-pink);font-size:16px;">check_circle</span>Escala total da
+                            marca
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        style="display:block;text-align:center;padding:1rem;border-radius:12px;border:1px solid rgba(244,114,182,0.3);color:var(--nebula-pink);font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.3s;">Começar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section id="processo" style="padding:6rem 1.5rem;position:relative;z-index:10;">
+        <div style="max-width:60rem;margin:0 auto;">
+            <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+                <span
+                    style="display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(168,85,247,0.08);border:1px solid rgba(168,85,247,0.15);font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-purple);margin-bottom:1rem;">05
+                    — Processo</span>
+                <h2
+                    style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);color:white;">
+                    Sua jornada <span class="text-gradient">estelar</span></h2>
+            </div>
+            <div class="stats-grid-6">
+                <div class="reveal delay-1" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(168,85,247,0.2);">
+                        <span
+                            style="color:var(--nebula-purple);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">01</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Diagnóstico</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Gratuito. Entendemos seu
+                        negócio.</p>
+                </div>
+                <!-- ... Item 02 ... -->
+                <div class="reveal delay-2" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(34,211,238,0.2);">
+                        <span
+                            style="color:var(--nebula-cyan);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">02</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Direção Criativa</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Definimos o caminho visual.</p>
+                </div>
+                <!-- ... Item 03 ... -->
+                <div class="reveal delay-3" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(244,114,182,0.1);border:1px solid rgba(244,114,182,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(244,114,182,0.2);">
+                        <span
+                            style="color:var(--nebula-pink);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">03</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Identidade Visual</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Criamos sua marca completa.</p>
+                </div>
+                <!-- ... Item 04 ... -->
+                <div class="reveal delay-4" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(217,70,239,0.1);border:1px solid rgba(217,70,239,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(217,70,239,0.2);">
+                        <span
+                            style="color:var(--nebula-magenta);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">04</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Posts & Vídeos</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Conteúdo que vende.</p>
+                </div>
+                <!-- ... Item 05 ... -->
+                <div class="reveal delay-5" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(56,189,248,0.2);">
+                        <span
+                            style="color:var(--nebula-blue);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">05</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Entrega</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Tudo organizado pra você.</p>
+                </div>
+                <!-- ... Item 06 ... -->
+                <div class="reveal delay-6" style="text-align:center;">
+                    <div
+                        style="width:80px;height:80px;border-radius:20px;background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 20px rgba(168,85,247,0.2);">
+                        <span
+                            style="color:var(--nebula-purple);font-family:var(--font-display);font-weight:700;font-size:1.5rem;">06</span>
+                    </div>
+                    <h3
+                        style="font-family:var(--font-display);font-weight:700;color:white;font-size:1.1rem;margin-bottom:0.5rem;">
+                        Acompanhamento</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;font-weight:300;">Mensal (opcional).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" style="padding:6rem 1.5rem;position:relative;z-index:10;">
+        <div style="max-width:50rem;margin:0 auto;">
+            <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+                <span
+                    style="display:inline-block;padding:0.25rem 0.75rem;border-radius:9999px;background:rgba(34,211,238,0.08);border:1px solid rgba(34,211,238,0.15);font-size:0.7rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.2em;color:var(--nebula-cyan);margin-bottom:1rem;">06
+                    — Contato</span>
+                <h2
+                    style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.5rem);color:white;">
+                    Vamos <span class="text-gradient">conversar</span></h2>
+                <p style="color:var(--text-muted);font-size:1rem;font-weight:300;margin-top:1rem;">Diagnóstico gratuito.
+                    Conte o que você precisa.</p>
+            </div>
+            <div class="glass-card reveal delay-1" style="border-radius:24px;padding:3rem;">
+                <form id="contact-form" style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <input type="text" placeholder="SEU NOME" required>
+                    <input type="text" placeholder="WHATSAPP OU E-MAIL" required>
+                    <input type="text" placeholder="QUAL O SEU NEGÓCIO?">
+                    <select style="cursor:pointer;">
+                        <option value="" disabled selected>QUAL PACOTE TE INTERESSA?</option>
+                        <option>Identidade Visual Express</option>
+                        <option>Presença Digital IA</option>
+                        <option>Escala Cósmica</option>
+                        <option>Ainda não sei</option>
+                    </select>
+                    <button type="submit"
+                        style="margin-top:1rem;padding:1.2rem;border-radius:12px;background:linear-gradient(135deg,var(--nebula-purple),var(--nebula-violet));color:white;font-weight:800;text-transform:uppercase;letter-spacing:0.15em;font-size:0.9rem;border:none;cursor:pointer;transition:all 0.3s;box-shadow:0 0 30px rgba(168,85,247,0.2);">
+                        Enviar Mensagem <span class="material-symbols-outlined"
+                            style="font-size:18px;vertical-align:middle;margin-left:8px;">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+        style="border-top:1px solid rgba(168,85,247,0.06);padding:4rem 1.5rem;background:rgba(5,5,16,0.5);margin-top:auto;">
+        <div
+            style="max-width:72rem;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;margin-bottom:3rem;">
+            <div class="footer-info">
+                <h3
+                    style="font-family:var(--font-display);font-size:1.8rem;color:white;margin-bottom:1rem;background:linear-gradient(45deg, white, var(--nebula-cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+                    Nébula Studio</h3>
+                <p style="color:var(--text-muted);">Onde a tecnologia encontra a arte para criar marcas inesquecíveis.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4
+                    style="color:white;margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.9rem;">
+                    Links Rápidos</h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.8rem;padding:0;">
+                    <li><a href="#" style="color:var(--text-muted);text-decoration:none;transition:color 0.3s;">Home</a>
+                    </li>
+                    <li><a href="#servicos"
+                            style="color:var(--text-muted);text-decoration:none;transition:color 0.3s;">Serviços</a>
+                    </li>
+                    <li><a href="#processo"
+                            style="color:var(--text-muted);text-decoration:none;transition:color 0.3s;">Processo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4
+                    style="color:white;margin-bottom:1.5rem;text-transform:uppercase;letter-spacing:0.1em;font-size:0.9rem;">
+                    Conecte-se</h4>
+                <div class="social-icons" style="display:flex;gap:1rem;">
+                    <a href="https://wa.me/5511987955497" target="_blank" title="WhatsApp"
+                        style="color:white;opacity:0.8;transition:all 0.3s;display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(255,255,255,0.05);border-radius:50%;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M16.92 14.33C16.87 14.26 16.74 14.18 16.59 14.1C16.44 14 15.73 13.66 15.59 13.61C15.46 13.57 15.36 13.55 15.27 13.69C15.18 13.82 14.91 14.14 14.83 14.23C14.75 14.33 14.66 14.34 14.52 14.27C14.37 14.2 13.9 14.04 13.34 13.54C12.9 13.15 12.61 12.66 12.52 12.52C12.44 12.38 12.51 12.3 12.59 12.22C12.66 12.15 12.74 12.08 12.82 12C12.91 11.91 12.96 11.85 13.01 11.75C13.07 11.66 13.04 11.58 12.99 11.48C12.95 11.39 12.55 10.4 12.39 10C12.22 9.61 12.05 9.66 11.93 9.66C11.82 9.66 11.7 9.66 11.57 9.66C11.44 9.66 11.23 9.71 11.06 9.9C10.88 10.09 10.38 10.56 10.38 11.53C10.38 12.5 11.09 13.44 11.18 13.57C11.29 13.7 12.62 15.75 14.66 16.63C16.35 17.36 16.69 17.21 17.29 17.15C17.9 17.09 19.16 16.42 19.42 15.68C19.68 14.94 19.68 14.31 19.61 14.2C19.53 14.1 19.44 14.07 19.29 14H19.29V14Z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/nebulastudio.ia" target="_blank" title="Instagram"
+                        style="color:white;opacity:0.8;transition:all 0.3s;display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(255,255,255,0.05);border-radius:50%;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M19,5A1,1 0 0,1 20,6A1,1 0 0,1 19,7A1,1 0 0,1 18,6A1,1 0 0,1 19,5Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:2rem;text-align:center;">
+            <p style="color:var(--text-muted);font-size:0.75rem;font-weight:300;letter-spacing:0.1em;">© 2026 NÉBULA
+                STUDIO. UNLOCK YOUR DIGITAL COSMOS.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Voltar ao topo">
+        <span class="material-symbols-outlined" style="font-size:20px;">keyboard_arrow_up</span>
+    </button>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;700&display=swap');
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none !important;
+            }
+
+            #menu-open {
+                display: block !important;
+            }
+        }
+    </style>
+
+    <!-- Bottom Nav (Mobile) -->
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="nav-item active">
+            <span class="material-symbols-outlined">home</span>
+            Home
+        </a>
+        <a href="#servicos" class="nav-item">
+            <span class="material-symbols-outlined">dataset</span>
+            Services
+        </a>
+        <div class="nav-item">
+            <button class="nav-logo-btn">
+                <span class="material-symbols-outlined" style="font-size:28px;">fingerprint</span>
+            </button>
+        </div>
+        <a href="#processo" class="nav-item">
+            <span class="material-symbols-outlined">rocket_launch</span>
+            Portfolio
+        </a>
+        <a href="#contato" class="nav-item">
+            <span class="material-symbols-outlined">mail</span>
+            Contact
+        </a>
+    </nav>
+
+    <script>
+        // CURSOR GLOW
+        const cg = document.getElementById('cursor-glow');
+        let mx = 0, my = 0, gx = 0, gy = 0;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+        function ac() { gx += (mx - gx) * 0.08; gy += (my - gy) * 0.08; cg.style.left = gx + 'px'; cg.style.top = gy + 'px'; requestAnimationFrame(ac); }
+        ac();
+        if ('ontouchstart' in window) cg.style.display = 'none';
+
+        // SPOTLIGHT EFFECT
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // SCROLL PROGRESS
+        const sp = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => { sp.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100 + '%'; });
+
+
+
+        // RADIAL STATS ANIMATION
+        const rs = document.querySelectorAll('.radial-progress');
+        const statsObserver = new IntersectionObserver(es => {
+            es.forEach(e => {
+                if (e.isIntersecting) {
+                    const el = e.target;
+                    const val = parseInt(el.dataset.value);
+                    const suffix = el.dataset.suffix || '%';
+                    let c = 0;
+                    const int = setInterval(() => {
+                        c += 2;
+                        if (c >= val) { c = val; clearInterval(int); }
+                        el.style.setProperty('--progress', c + '%');
+                        const span = el.querySelector('span');
+                        if (span) span.textContent = (suffix === 'M+' || suffix === '+') ? (c === 100 ? (suffix === 'M+' ? '1.2M+' : '200+') : c) : c + suffix;
+                    }, 30);
+                    statsObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        rs.forEach(el => statsObserver.observe(el));
+
+        // MAGNETIC BUTTONS
+        document.querySelectorAll('a[href="#contato"]').forEach(b => {
+            b.addEventListener('mousemove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.15}px,${(e.clientY - r.top - r.height / 2) * 0.15}px)`; });
+            b.addEventListener('mouseleave', () => { b.style.transform = 'translate(0,0)'; b.style.transition = 'transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275)'; });
+            b.addEventListener('mouseenter', () => { b.style.transition = 'transform 0.1s ease-out'; });
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function (e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) { t.scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-menu').classList.remove('open'); } }); });
+
+        // HEADER SCROLL
+        const hd = document.querySelector('header');
+        window.addEventListener('scroll', () => { hd.style.background = window.scrollY > 50 ? 'rgba(5,5,16,0.95)' : 'rgba(5,5,16,0.8)'; });
+
+        // MOBILE MENU
+        document.getElementById('menu-open').addEventListener('click', () => document.getElementById('mobile-menu').classList.add('open'));
+        document.getElementById('menu-close').addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
+
+        // SCROLL TOP
+        const stb = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => { stb.classList.toggle('visible', window.scrollY > 600); });
+        stb.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // SCROLL REVEAL
+        const ro = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.reveal,.reveal-scale').forEach(el => ro.observe(el));
+
+        // FORM
+        const fm = document.getElementById('contact-form');
+        if (fm) fm.addEventListener('submit', e => { e.preventDefault(); fm.innerHTML = '<div style="text-align:center;padding:3rem 0;"><span class="material-symbols-outlined" style="font-size:48px;color:var(--nebula-cyan);">check_circle</span><h3 style="font-family:var(--font-display);font-weight:700;color:white;margin-top:1rem;">Mensagem enviada!</h3><p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.5rem;">Vamos entrar em contato em breve.</p></div>'; });
+
+        // TEXT ROTATOR (GLITCH PHRASES)
+        const glitchText = document.querySelector('.glitch');
+        const phrases = ["digital marca", "sua essência", "o futuro", "estratégia", "seu legado"];
+        let phraseIndex = 0;
+        if (glitchText) {
+            setInterval(() => {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                glitchText.setAttribute('data-text', phrases[phraseIndex]);
+                glitchText.textContent = phrases[phraseIndex];
+            }, 3000); // Change every 3 seconds
+        }
+    </script>
+</body>
+
+</html>
