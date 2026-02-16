@@ -1,0 +1,17 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "NebulaStudio",
+    "projectPath": "c:\\Users\\Operador\\Desktop\\Pessoal\\NebulaStudio",
+    "testIds": [],
+    "additionalInstruction": "Final validation run. Focus on: Contact Form AJAX behavior, WhatsApp link validity, and Mobile Menu closing logic.",
+    "envs": {
+      "API_KEY": "sk-user-1SMj0bhnXxh88TLbbf5k05uglmTsQBo0fes3kAkSwVKoBda3wla9LVI-lXYfLSc2NYnYkhxNfTtHGebYLzUqKjCRioKYTAGGps07DhaaDdPR4a2k8qpGRc-M1xEBKtq5UQg"
+    }
+  },
+  "serverPort": 62111,
+  "proxy": "http://b60dc0cd-79f3-40c8-9b54-5cf46de46747:C8ArpIwwz88GSAzlf5rc3sv8UXUlu38v@tun.testsprite.com:8080"
+}

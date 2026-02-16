@@ -433,14 +433,14 @@ section {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.3);
     padding: 0 2rem;
     white-space: nowrap;
 }
 
 .marquee-content span.highlight {
     color: var(--glow-primary);
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 @keyframes marquee-scroll {

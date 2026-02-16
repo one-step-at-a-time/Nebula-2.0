@@ -1,0 +1,31 @@
+version: "2"
+type: frontend
+tech_stack:
+  - HTML5
+  - Vanilla CSS
+  - JavaScript
+routes:
+  - path: /
+    file: index.html
+    auth_required: false
+    description: Main landing page for Nebula Studio
+features:
+  - name: Landing Page UI
+    description: Main visual showcase with Dark Premium aesthetic and luxury positioning.
+    files:
+      - index.html
+      - styles.css
+    entry_route: /
+    user_interactions:
+      - Scroll through sections
+      - View "Sua jornada estelar" (Journey)
+      - View Client Testimonials
+    auth_required: false
+  - name: WhatsApp Contact
+    description: Floating button for direct WhatsApp contact.
+    files:
+      - index.html
+    user_interactions:
+      - Click on WhatsApp button
+    auth_required: false
+known_limitations: []

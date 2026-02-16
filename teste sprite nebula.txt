@@ -1,0 +1,47 @@
+🌑 PRD: NÉBULA STUDIO — ECOSSISTEMA SOBERANO (V1.0)
+1. Visão Geral do Produto
+Nome: Nébula Studio Web Entity.
+
+Objetivo: Converter visitantes em clientes de alto ticket através de uma experiência Dark Premium cinematográfica, validando autoridade em Branding, IA e Estratégia.
+
+Público-Alvo: Pequenos negócios em busca de metamorfose para marcas de desejo.
+
+2. Requisitos de Experiência e Design (A Alquimia)
+Estética: Interface Dark Premium com uso intensivo de vidro (glassmorphism), neon (roxo/ciano) e profundidade cósmica.
+
+Animações Críticas:
+
+Glitch Effect: O título principal deve alternar frases dinamicamente ("digital marca", "seu legado") sem quebrar o layout.
+
+Cursor Glow: Um halo de luz deve seguir o movimento do mouse com suavidade (interpolação).
+
+Scroll Reveal: Elementos devem surgir conforme a rolagem, acionando as classes de "reveal".
+
+Radial Stats: Gráficos circulares devem animar de 0 até o valor final ao entrarem no viewport.
+
+3. Requisitos Funcionais (O Sistema Nervoso)
+Navegação: Menu desktop fixo com efeito de desfoque (backdrop-blur) e Menu Mobile overlay funcional.
+
+Conversão (Lead Gen):
+
+O formulário de contato deve validar campos obrigatórios (Nome, Contato).
+
+Feedback de Sucesso: Após o envio, o formulário deve ser substituído por uma mensagem de confirmação sem recarregar a página (AJAX/Fetch simulation).
+
+Interatividade: Botões magnéticos que reagem à proximidade do cursor.
+
+4. Requisitos Técnicos e Performance (A Forja)
+Responsividade: O site deve ser 100% funcional em resoluções mobile, tablet e desktop, ativando a barra de navegação inferior em dispositivos móveis.
+
+SEO Social: Metadados configurados para pré-visualização otimizada em redes sociais.
+
+Acessibilidade: Uso de ícones Material Symbols para navegação intuitiva e suporte a leitores de tela.
+
+5. Casos de Teste Sugeridos para o TestSprite
+Teste de Stress de Animação: Verificar se o cursor-glow e os morph-blobs causam queda de frames (FPS) abaixo de 60fps.
+
+Validação de Formulário: Tentar enviar o formulário vazio e verificar se o erro é exibido corretamente.
+
+Integridade de Links: Validar se todos os links de âncora (#servicos, #contato, etc.) levam às seções corretas com scroll suave.
+
+Responsividade do Panteão: Garantir que os cards das divindades (Atena, Apolo, etc.) se ajustam em grid de uma coluna em telas menores que 768px.

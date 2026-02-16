@@ -1,0 +1,46 @@
+🌑 I. Desenvolvimento Web (The Void Forge)
+A transformação do código em experiência.
+
+Concepção Visual (Stitch): Onde a estética Dark Premium ganha as primeiras formas e layouts.
+
+Aprimoramento & Vibe Code (Antigravity): Refinamento do front-end e implementação de lógica básica via linguagem natural.
+
+Engenharia de Dados (Supabase): Onde o site ganha "músculos". Implementação de bancos de dados, controle de estoque real e gateways de pagamento (como a InfinitePay).
+
+Auditória de Stress (TestSprite): Testes automatizados para garantir que nenhum botão quebre sob pressão.
+
+Blindagem Digital (Snyk / GitHub Security): A IA que você buscava é o Snyk ou o GitHub Advanced Security. Ela varre vulnerabilidades e garante que o site seja impenetrável.
+
+Checkpoint de Realidade (GitHub): Commits constantes. Cada pequena vitória é salva e versionada.
+
+Lançamento em Órbita (Vercel / Netlify): Deploy ultra-rápido com performance otimizada para SEO Social.
+
+🌑 II. Rebranding & Social Authority (The Glow-up Ritual)
+Transformando o amador em uma marca de desejo.
+
+Imersão (Briefing): Diálogo profundo com o proprietário para extrair a alma do negócio.
+
+Arquitetura do Panteão (Gems): Acionamos Apolo, Atena, Têmis, Prometeu e Hermes para planejar a narrativa, os funis e o compliance jurídico.
+
+Geração de Ativos (Alquimia Visual):
+
+ImageFX & Flux: Para fotografias de produtos e posts que desafiam a realidade.
+
+Google Vids & Veo 3.1: Criação de vídeos cinematográficos e b-rolls de luxo.
+
+Google Whisky & Heygen: Desenvolvimento de influenciadores de IA e avatares consistentes para escala humana sem limites.
+
+Refino Cinematográfico (CapCut): Edição final com foco em retenção e sound design de elite.
+
+Estratégia Mestra (Gemini): Planejamento de calendário editorial focado em conversão e SEO Social.
+
+🌑 III. Inteligência Operacional (The Neural Network)
+O cérebro que nunca dorme.
+
+Motor Central (n8n): O sistema nervoso que conecta o site, as redes sociais e o WhatsApp.
+
+Atendimento Inabalável: Automação de DMs e WhatsApp que qualifica leads 24/7.
+
+Controle de Fluxo: Sincronização automática entre vendas, estoque e CRM (Google Sheets/Supabase).
+
+Eficiência Brutal: Eliminação de tarefas repetitivas para que o proprietário foque apenas em ser o rosto da marca.

@@ -1,0 +1,903 @@
+[
+  {
+    "id": "TC001",
+    "title": "Landing page loads and shows core hero/branding content",
+    "description": "Verifies the landing page renders successfully and the primary brand messaging is visible on initial load.",
+    "category": "Landing Page UI",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify page title contains \"Nébula\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Nébula\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Studio\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Scroll to and view the \"Sua jornada estelar\" (Journey) section",
+    "description": "Verifies the user can scroll the landing page and reach the Journey section content.",
+    "category": "Landing Page UI",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Sua jornada estelar\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sua jornada estelar\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"section\" containing text \"Sua jornada estelar\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Scroll to and view the Client Testimonials section",
+    "description": "Verifies the testimonials area is reachable and visible when scrolling the landing page.",
+    "category": "Landing Page UI",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Client Testimonials\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Client Testimonials\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"section\" containing text \"Client Testimonials\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "End-to-end scroll journey: Journey section then Testimonials section",
+    "description": "Verifies a complete visitor flow through key sections in sequence on the landing page.",
+    "category": "Landing Page UI",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Sua jornada estelar\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sua jornada estelar\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Client Testimonials\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Client Testimonials\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Visual aesthetic presence: glassmorphism and neon-like elements appear",
+    "description": "Verifies the page presents visible dark-premium visual treatment using glass/overlay and neon-accent elements.",
+    "category": "Landing Page UI",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"glass\" styled card/panel is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"neon\" accent/glow element is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"glass\" styled card/panel is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Animations present during scroll without requiring performance validation",
+    "description": "Verifies animated interactions appear as the user scrolls through the landing page (without measuring FPS).",
+    "category": "Landing Page UI",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"animated\" section content is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"animated\" transition or motion content is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Successful contact form submission shows confirmation message without page reload",
+    "description": "Verifies that submitting valid required fields replaces the contact form with a confirmation message on the same page.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Nome\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Teste Nome\" into the \"Nome\" field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"teste@exemplo.com\" into the \"Contato\" field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Nome\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Empty required fields show inline validation errors",
+    "description": "Verifies that leaving Nome and Contato empty triggers visible inline validation errors and blocks submission.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Nome\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigatório\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Contato\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Only Nome filled still requires Contato and does not submit",
+    "description": "Verifies the form blocks submission when Contato is empty and shows a required-field error for Contato.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Teste Nome\" into the \"Nome\" field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Contato\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigatório\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Only Contato filled still requires Nome and does not submit",
+    "description": "Verifies the form blocks submission when Nome is empty and shows a required-field error for Nome.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "action",
+        "description": "Type \"(11) 99999-9999\" into the \"Contato\" field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Nome\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigatório\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Confirmation message appears in the contact section after submission",
+    "description": "Verifies the success message is shown within the contact area and the form is no longer presented after submit.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the contact section heading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Contato\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Cliente Potencial\" into the \"Nome\" field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"@cliente\" into the \"Contato\" field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Required-field error clears after entering a missing value and resubmitting",
+    "description": "Verifies that a required-field validation error can be resolved by entering the missing data and submitting successfully.",
+    "category": "Contact Form (Lead Gen)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /#contato"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigatório\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Nome Corrigido\" into the \"Nome\" field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"contato corrigido\" into the \"Contato\" field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Submit button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"obrigado\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Desktop fixed navigation is visible with backdrop-blur styling cues",
+    "description": "Verifies the desktop header navigation is present and appears as a fixed, premium blurred menu container on the landing page.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"site header / top navigation bar\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"desktop navigation menu links\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"header background / blurred backdrop area behind the menu\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile menu icon (hamburger)\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Desktop menu anchor smoothly scrolls to Serviços section",
+    "description": "Verifies clicking a desktop navigation anchor scrolls to the Serviços section and the target section is visibly in focus.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the desktop menu link labeled \"Serviços\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"#servicos\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Serviços section\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Serviços\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Desktop menu anchor smoothly scrolls to Contato section",
+    "description": "Verifies clicking a desktop navigation anchor scrolls to the Contato section and the target section becomes visible.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the desktop menu link labeled \"Contato\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"#contato\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Contato section\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Contato\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Desktop navigation remains available after scrolling to a section",
+    "description": "Verifies the navigation header remains visible after navigating to an in-page anchor, consistent with a fixed menu.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the desktop menu link labeled \"Serviços\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Serviços section\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"site header / top navigation bar\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"desktop navigation menu links\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Mobile overlay menu opens from the mobile menu icon",
+    "description": "Verifies the mobile menu icon opens the overlay navigation and the overlay contents are visible.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile menu icon (hamburger)\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the mobile menu icon (hamburger)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu links\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Mobile overlay menu link closes overlay and scrolls to Serviços",
+    "description": "Verifies selecting a link in the mobile overlay closes the overlay and navigates to the Serviços section.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the mobile menu icon (hamburger)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the overlay menu link labeled \"Serviços\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is not visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Serviços section\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Mobile overlay menu link closes overlay and scrolls to Contato",
+    "description": "Verifies selecting a link in the mobile overlay closes the overlay and navigates to the Contato section.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on the mobile menu icon (hamburger)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the overlay menu link labeled \"Contato\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is not visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Contato section\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Negative: Mobile menu overlay fails to open when tapping menu icon (unresponsive state)",
+    "description": "Validates the failure mode where the mobile overlay menu does not open and remains inaccessible after interaction.",
+    "category": "Navigation (Desktop & Mobile)",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile menu icon (hamburger)\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on the mobile menu icon (hamburger)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile overlay menu\" is not visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"mobile menu icon (hamburger)\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Scroll reveal adds reveal classes when elements enter viewport",
+    "description": "Verifies content elements visually transition into view as the page is scrolled down, indicating reveal behavior is triggered.",
+    "category": "Animations & Interactivity",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"hero section\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down to the next content section below the hero"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"first reveal-on-scroll content block\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the content block appears in its revealed state (not hidden/collapsed)"
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "Multiple reveal elements trigger as user continues scrolling",
+    "description": "Verifies additional elements reveal progressively as they enter the viewport during continued scrolling.",
+    "category": "Animations & Interactivity",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down to a mid-page section containing multiple content blocks"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"a reveal-on-scroll content block\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll down to the next section where additional blocks should reveal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"another reveal-on-scroll content block\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the newly reached block appears in its revealed state (not hidden/collapsed)"
+      }
+    ]
+  },
+  {
+    "id": "TC023",
+    "title": "Landing page provides SEO metadata for title and description",
+    "description": "Verifies the landing page exposes basic SEO metadata in visible page content and title.",
+    "category": "Accessibility & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify page title contains \"Nébula\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"header\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"footer\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC024",
+    "title": "Open Graph / social preview content is reflected by visible hero messaging",
+    "description": "Validates that the visible hero copy aligns with what would be expected for social preview title/description configuration.",
+    "category": "Accessibility & SEO",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"cinematic\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"AI\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"strategy\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC025",
+    "title": "Keyboard navigation: Tab reaches primary interactive elements in the header/hero",
+    "description": "Ensures key call-to-action and navigation elements are reachable by keyboard and show a clear focus target.",
+    "category": "Accessibility & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Press Tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"link\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Press Tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"button\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Press Tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"a\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC026",
+    "title": "Keyboard navigation: Enter activates a focused call-to-action without requiring a mouse",
+    "description": "Verifies a focused interactive control can be activated using the keyboard to progress the user journey.",
+    "category": "Accessibility & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Press Tab"
+      },
+      {
+        "type": "action",
+        "description": "Press Tab"
+      },
+      {
+        "type": "action",
+        "description": "Press Enter"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC027",
+    "title": "Screen-reader-friendly structure: semantic landmarks are present",
+    "description": "Checks that the page uses semantic landmarks to support screen reader navigation (visibly present structural elements).",
+    "category": "Accessibility & SEO",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"header\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"nav\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"footer\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC028",
+    "title": "Material Symbols/icons do not replace critical text labels for CTAs",
+    "description": "Ensures iconography does not remove essential visible labels needed for accessibility and comprehension.",
+    "category": "Accessibility & SEO",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"button\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Contact\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Work\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Services\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC029",
+    "title": "Edge case: validate remediation requirement when metadata is missing (manual negative check)",
+    "description": "Documents the expected failure mode when social metadata is absent; verifies visible indicators that metadata configuration is incomplete cannot be confirmed from the UI alone.",
+    "category": "Accessibility & SEO",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"main\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify page title contains \"Nébula\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"header\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"footer\" is visible"
+      }
+    ]
+  }
+]
