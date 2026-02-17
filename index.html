@@ -13,7 +13,8 @@
                    img-src 'self' data: https://wa.me https://api.whatsapp.com;">
     <title>NÉBULA STUDIO | Dark Premium Authority</title>
 
-    <!-- Fonts -->
+    <!-- Fonts e Mobile Assets -->
+    <link rel="apple-touch-icon" href="novo logo nebula.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -74,7 +75,8 @@
         <div class="max-w-7xl mx-auto h-20 flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <div class="w-12 h-12 flex items-center justify-center">
-                    <img src="novo logo nebula.png" alt="Nebula Logo" class="w-full h-full object-contain">
+                    <img src="novo logo nebula.png" alt="Nebula Logo" class="w-full h-full object-contain"
+                        fetchpriority="high">
                 </div>
                 <h2 class="text-white text-xl font-display font-bold tracking-tight">NÉBULA STUDIO</h2>
             </div>
@@ -100,7 +102,7 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu">
         <div class="px-10 pt-10 pb-6 flex items-center gap-3">
-            <img src="novo logo nebula.png" alt="Logo" class="w-10 h-10 object-contain">
+            <img src="novo logo nebula.png" alt="Logo" class="w-10 h-10 object-contain" loading="lazy">
             <span class="text-white font-display font-bold text-xl tracking-tight">NÉBULA</span>
         </div>
         <button class="close-btn" id="menu-close" aria-label="Fechar menu">
@@ -661,6 +663,11 @@
                     <div class="glass-panel p-8 md:p-12 rounded-[32px] relative z-10 overflow-hidden">
                         <h3 class="font-display font-bold text-2xl text-white mb-8">Inicie seu Projeto</h3>
                         <form id="main-contact-form" class="space-y-8" novalidate>
+                            <!-- Honeypot Field (Anti-Spam) -->
+                            <div class="hidden" aria-hidden="true" style="display:none;">
+                                <input type="text" name="hp_field" id="hp_field" tabindex="-1" autocomplete="off">
+                            </div>
+
                             <div class="relative">
                                 <input type="text" id="name" name="name"
                                     class="input-underline peer placeholder-transparent" placeholder="Nome" required>
@@ -846,6 +853,13 @@
             contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
+
+                // Honeypot Check
+                const hpValue = document.getElementById('hp_field').value;
+                if (hpValue) {
+                    console.warn("Spam detectado.");
+                    return false;
+                }
 
                 // Custom Validation
                 let isValid = true;
