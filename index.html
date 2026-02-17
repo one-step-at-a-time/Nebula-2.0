@@ -73,13 +73,14 @@
     <header
         class="fixed top-0 left-0 w-full z-[100] transition-all duration-300 border-b border-white/5 bg-bg-void/80 backdrop-blur-md px-6">
         <div class="max-w-7xl mx-auto h-20 flex items-center justify-between">
-            <div class="flex items-center gap-4">
+            <a href="#" class="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                aria-label="Nebula Studio Home">
                 <div class="w-12 h-12 flex items-center justify-center">
                     <img src="novo logo nebula.png" alt="Nebula Logo" class="w-full h-full object-contain"
                         fetchpriority="high">
                 </div>
                 <h2 class="text-white text-xl font-display font-bold tracking-tight">NÉBULA STUDIO</h2>
-            </div>
+            </a>
 
             <nav class="hidden md:flex items-center gap-8">
                 <a href="#servicos" class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
@@ -101,10 +102,11 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu">
-        <div class="px-10 pt-10 pb-6 flex items-center gap-3">
+        <a href="#" class="px-10 pt-10 pb-6 flex items-center gap-3 hover:opacity-80 transition-opacity"
+            aria-label="Nebula Studio Home">
             <img src="novo logo nebula.png" alt="Logo" class="w-10 h-10 object-contain" loading="lazy">
             <span class="text-white font-display font-bold text-xl tracking-tight">NÉBULA</span>
-        </div>
+        </a>
         <button class="close-btn" id="menu-close" aria-label="Fechar menu">
             <span class="material-symbols-outlined text-3xl">close</span>
         </button>
