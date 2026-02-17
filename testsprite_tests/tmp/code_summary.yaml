@@ -2,30 +2,48 @@ version: "2"
 type: frontend
 tech_stack:
   - HTML5
-  - Vanilla CSS
-  - JavaScript
+  - CSS3
+  - JavaScript (Vanilla)
 routes:
   - path: /
     file: index.html
     auth_required: false
     description: Main landing page for Nebula Studio
 features:
-  - name: Landing Page UI
-    description: Main visual showcase with Dark Premium aesthetic and luxury positioning.
+  - name: Landing Page Navigation
+    description: Smooth scrolling navigation to different sections
     files:
       - index.html
       - styles.css
     entry_route: /
     user_interactions:
-      - Scroll through sections
-      - View "Sua jornada estelar" (Journey)
-      - View Client Testimonials
+      - Click "Serviços" to scroll to services
+      - Click "Contato" to scroll to contact form
+      - Click "Sua Jornada" to view process steps
+    api_calls: []
     auth_required: false
-  - name: WhatsApp Contact
-    description: Floating button for direct WhatsApp contact.
+  - name: Contact Form
+    description: Form for users to get in touch
     files:
       - index.html
+    entry_route: /#contato
     user_interactions:
-      - Click on WhatsApp button
+      - Fill "Nome" input
+      - Fill "Contato" input (email/phone)
+      - Click Submit button
+      - See success message "Obrigado"
+      - See validation errors for empty fields
+    api_calls: []
+    auth_required: false
+  - name: Mobile Menu
+    description: Responsive navigation for mobile devices
+    files:
+      - index.html
+      - styles.css
+    entry_route: /
+    user_interactions:
+      - Click hamburger icon to open menu
+      - Click menu link to navigate and close menu
+    api_calls: []
     auth_required: false
 known_limitations: []

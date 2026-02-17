@@ -2,16 +2,16 @@
   "status": "commited",
   "type": "frontend",
   "scope": "codebase",
-  "localEndpoint": "http://localhost:3000",
+  "localEndpoint": "http://localhost:8080",
   "executionArgs": {
     "projectName": "NebulaStudio",
     "projectPath": "c:\\Users\\Operador\\Desktop\\Pessoal\\NebulaStudio",
     "testIds": [],
-    "additionalInstruction": "Final validation run. Focus on: Contact Form AJAX behavior, WhatsApp link validity, and Mobile Menu closing logic.",
+    "additionalInstruction": "Focus on verifying that:\n1. Contact form validation blocks submission for empty fields and invalid phone numbers (less than 8 digits).\n2. Navigation to 'Contato' and 'Sua Jornada' works correctly and updates the URL hash.\n3. The mobile menu closes on link click.\n4. All navigation items are accessible via keyboard and have proper labels.",
     "envs": {
       "API_KEY": "sk-user-1SMj0bhnXxh88TLbbf5k05uglmTsQBo0fes3kAkSwVKoBda3wla9LVI-lXYfLSc2NYnYkhxNfTtHGebYLzUqKjCRioKYTAGGps07DhaaDdPR4a2k8qpGRc-M1xEBKtq5UQg"
     }
   },
-  "serverPort": 62111,
-  "proxy": "http://b60dc0cd-79f3-40c8-9b54-5cf46de46747:C8ArpIwwz88GSAzlf5rc3sv8UXUlu38v@tun.testsprite.com:8080"
+  "serverPort": 63213,
+  "proxy": "http://50c6fcc3-9d2e-421f-987d-2cf27876aa7e:jQkVItC0CXQxw4nZgJLvwu15uZgdeY1o@tun.testsprite.com:8080"
 }
