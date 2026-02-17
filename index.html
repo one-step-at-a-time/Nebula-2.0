@@ -402,8 +402,8 @@
                         <span class="text-[10px] font-mono text-glow-secondary tracking-widest uppercase mb-6">Presença
                             Digital IA</span>
                         <div class="flex items-baseline gap-2 mb-8">
-                            <span class="text-4xl font-display font-bold text-white">R$450</span>
-                            <span class="text-slate-500 text-sm">R$900/mês</span>
+                            <span class="text-4xl font-display font-bold text-white">R$650</span>
+                            <span class="text-slate-500 text-sm">R$1300/mês</span>
                         </div>
                         <ul class="space-y-4 mb-10 flex-grow">
                             <li class="flex items-center gap-3 text-sm text-white">
@@ -594,6 +594,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nebula Quality Guarantee -->
+        <section class="py-12 bg-white/5 border-y border-white/5 relative z-10">
+            <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+                <div
+                    class="w-20 h-20 rounded-full bg-glow-primary/10 border border-glow-primary/20 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-glow-primary text-4xl">verified_user</span>
+                </div>
+                <div>
+                    <h3 class="text-white font-display font-bold text-xl mb-2">Garantia de Qualidade Nébula</h3>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">
+                        Cada projeto passa por uma varredura rigorosa de **segurança (CodeQL & Secret Scan)** e
+                        **performance**.
+                        Garantimos um site blindado, rápido e otimizado para conversão antes mesmo de chegar às suas
+                        mãos.
+                    </p>
                 </div>
             </div>
         </section>
@@ -898,18 +917,28 @@
                 setTimeout(() => {
                     // Success state - Replace form content
                     const parentDiv = this.parentElement;
+                    const userName = document.getElementById('name').value;
+
                     parentDiv.innerHTML = `
                         <div class="text-center py-10 reveal active">
                             <div class="w-20 h-20 rounded-full bg-glow-primary/10 border border-glow-primary/20 flex items-center justify-center mx-auto mb-6">
                                 <span class="material-symbols-outlined text-glow-primary text-4xl">check_circle</span>
                             </div>
                             <h3 class="font-display font-bold text-2xl text-white mb-4">Acesso Liberado!</h3>
-                            <p class="text-slate-400 max-w-sm mx-auto">Sua jornada estelar começa agora. Entraremos em contato em breve via WhatsApp.</p>
+                            <p class="text-slate-400 max-w-sm mx-auto">Sua jornada estelar começa agora. Estamos te redirecionando para o WhatsApp...</p>
                             <div class="mt-8">
-                                <span class="text-glow-primary font-mono text-xs uppercase tracking-widest">Obrigado!</span>
+                                <span class="text-glow-primary font-mono text-xs uppercase tracking-widest">Obrigado, ${userName}!</span>
                             </div>
                         </div>
                     `;
+
+                    // Redirect to WhatsApp with pre-filled message
+                    const msg = encodeURIComponent(`Olá! Meu nome é ${userName}. Estive no site da Nebula e gostaria de solicitar um Orçamento VIP!`);
+                    const waUrl = `https://wa.me/5511999999999?text=${msg}`;
+
+                    setTimeout(() => {
+                        window.open(waUrl, '_blank');
+                    }, 1500);
                 }, 400);
             });
         }
