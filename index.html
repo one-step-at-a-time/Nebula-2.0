@@ -119,9 +119,19 @@
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+            <!-- Video Background -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="nebula-bg.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+                <!-- Overlay de 40% -->
+                <div class="absolute inset-0 bg-bg-void/40 backdrop-blur-[2px]"></div>
+            </div>
+
             <!-- Background Glow -->
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-glow-primary/5 rounded-full blur-[120px] pointer-events-none">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-glow-primary/5 rounded-full blur-[120px] pointer-events-none z-1">
             </div>
 
             <div class="max-w-7xl mx-auto w-full text-center relative z-10">
