@@ -808,3 +808,38 @@ section {
     border-color: var(--glow-primary);
     box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15);
 }
+
+/* ========================================
+   MOBILE OPTIMIZATIONS (PERFORMANCE)
+   ======================================== */
+@media (max-width: 768px) {
+
+    /* Desativa blurs pesados que travam CPUs mobile */
+    .glass-panel,
+    .glass-card,
+    .god-content,
+    .mobile-menu,
+    .scroll-top-btn {
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        background: rgba(15, 17, 21, 0.9) !important;
+    }
+
+    /* Reduz complexidade das animações */
+    .morph-blob {
+        display: none !important;
+    }
+
+    /* Otimiza transições e efeitos de scroll */
+    .reveal {
+        transition-duration: 0.4s !important;
+        transform: translateY(20px) !important;
+    }
+
+    /* Fallback para backgrounds pesados */
+    .mobile-hero-bg {
+        background-image: url('bg-nebula.png');
+        background-size: cover;
+        background-position: center;
+    }
+}
